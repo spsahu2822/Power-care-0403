@@ -1,32 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Care 0403.com | Jamshedpur On-Demand Electricians</title>
+    <title>Power Care 0403.com | Jamshedpur</title>
     <style>
         :root {
             --primary: #f59e0b;
-            --primary-dark: #d97706;
             --dark: #0f172a;
             --light: #f8fafc;
             --gray: #64748b;
             --success: #16a34a;
             --danger: #dc2626;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
         body { background: var(--light); color: var(--dark); min-height: 100vh; display: flex; flex-direction: column; }
         header { background: var(--dark); color: white; padding: 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
         header h1 { font-size: 1.25rem; margin-bottom: 0.2rem; }
         header p { font-size: 0.75rem; color: #94a3b8; }
-        .badge-warranty { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 1rem; margin-top: 0.4rem; }
         .container { max-width: 500px; width: 100%; margin: 0 auto; padding: 1rem; flex: 1; }
         .card { background: white; padding: 1.25rem; border-radius: 1rem; box-shadow: 0 4px 10px rgb(0 0 0 / 0.08); margin-bottom: 1rem; }
-        h2 { font-size: 1.2rem; margin-bottom: 0.35rem; color: var(--dark); text-align: center; }
-        h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--dark); }
-        .subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1.25rem; text-align: center; }
-        .btn { display: block; width: 100%; padding: 0.9rem; margin-bottom: 0.75rem; border: none; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: center; transition: transform 0.1s; }
-        .btn:active { transform: scale(0.98); }
+        h2 { font-size: 1.2rem; margin-bottom: 0.5rem; text-align: center; }
+        .subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1rem; text-align: center; }
+        .btn { display: block; width: 100%; padding: 0.9rem; margin-bottom: 0.75rem; border: none; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: center; }
         .btn-customer { background: var(--primary); color: var(--dark); }
         .btn-partner { background: var(--dark); color: white; }
         .btn-admin { background: #e2e8f0; color: var(--dark); }
@@ -34,22 +31,17 @@
         .btn-danger { background: var(--danger); color: white; }
         .btn-outline { background: white; border: 1.5px solid #cbd5e1; color: var(--dark); }
         .form-group { margin-bottom: 0.85rem; text-align: left; }
-        .form-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--dark); }
+        .form-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.3rem; }
         .form-control { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 0.5rem; font-size: 0.95rem; }
         .hidden { display: none !important; }
         .back-btn { background: none; border: none; color: var(--gray); font-size: 0.85rem; margin-top: 0.5rem; cursor: pointer; text-decoration: underline; width: 100%; text-align: center; display: block; }
-        .status-bar { display: flex; justify-content: space-between; align-items: center; background: #f1f5f9; padding: 0.75rem 1rem; border-radius: 0.75rem; margin-bottom: 1rem; }
+        .status-bar { display: flex; justify-content: space-between; align-items: center; background: #f1f5f9; padding: 0.75rem; border-radius: 0.75rem; margin-bottom: 1rem; }
         .toggle-btn { padding: 0.45rem 0.9rem; border-radius: 2rem; border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
         .online { background: var(--success); color: white; }
         .offline { background: var(--danger); color: white; }
         .order-box { border: 2px solid var(--primary); background: #fffbeb; padding: 1rem; border-radius: 0.75rem; margin-bottom: 1rem; }
         .order-box p { font-size: 0.85rem; margin-bottom: 0.35rem; }
-        .alert-siren { background: #fee2e2; border: 2px solid var(--danger); color: #991b1b; padding: 0.75rem; border-radius: 0.75rem; text-align: center; font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; animation: pulse 1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-        .stat-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.75rem; border-radius: 0.5rem; text-align: center; }
-        .stat-box span { display: block; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
-        .stat-box small { font-size: 0.72rem; color: var(--gray); }
+        .alert-box { background: #fee2e2; border: 2px solid var(--danger); color: #991b1b; padding: 0.75rem; border-radius: 0.75rem; text-align: center; font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
@@ -57,38 +49,36 @@
     <header>
         <h1>Power Care 0403.com</h1>
         <p>Telco • Birsanagar • Azad Market • Hurlung</p>
-        <div class="badge-warranty">🛡️ 15-Day Workmanship Warranty</div>
+        <div style="font-size: 0.75rem; color: #fef08a; margin-top: 0.3rem;">🛡️ 15-Day Workmanship Warranty</div>
     </header>
 
     <div class="container">
-        <!-- HOME VIEW -->
-        <div id="home-view" class="card" style="text-align: center;">
+        <!-- HOME -->
+        <div id="home-view" class="card">
             <h2>Welcome to Power Care</h2>
-            <p class="subtitle">Fast, Verified Local Electricians in Jamshedpur</p>
-            
-            <button class="btn btn-customer" onclick="switchPortal('customer')">👤 Customer Portal (Book Service)</button>
-            <button class="btn btn-partner" onclick="switchPortal('partner')">⚡ Partner Portal (Electrician App)</button>
-            <button class="btn btn-admin" onclick="switchPortal('admin')">🔒 Owner Admin Panel</button>
-            <p style="font-size: 0.72rem; color: var(--gray); margin-top: 0.5rem;">Note: Prototype mode active — test Customer order then switch to Partner/Admin on same device!</p>
+            <p class="subtitle">Select your portal to continue</p>
+            <button class="btn btn-customer" onclick="goTo('customer')">👤 Customer Portal</button>
+            <button class="btn btn-partner" onclick="goTo('partner')">⚡ Partner Portal</button>
+            <button class="btn btn-admin" onclick="goTo('admin')">🔒 Owner Admin Panel</button>
         </div>
 
-        <!-- CUSTOMER VIEW -->
+        <!-- CUSTOMER -->
         <div id="customer-view" class="card hidden">
-            <h2>Book an Electrician</h2>
-            <p class="subtitle">10-Min Free Cancellation • Transparent Rates</p>
+            <h2>Book Electrician</h2>
+            <p class="subtitle">10-Min Free Cancellation</p>
             
-            <div id="cust-form-area">
+            <div id="cust-form">
                 <div class="form-group">
-                    <label>Customer Name</label>
-                    <input type="text" id="cust-name" class="form-control" placeholder="Enter your full name">
+                    <label>Your Name</label>
+                    <input type="text" id="c-name" class="form-control" placeholder="Enter name">
                 </div>
                 <div class="form-group">
                     <label>Mobile Number</label>
-                    <input type="tel" id="cust-phone" class="form-control" placeholder="10-digit mobile number">
+                    <input type="tel" id="c-phone" class="form-control" placeholder="10-digit number">
                 </div>
                 <div class="form-group">
-                    <label>Select Service Area</label>
-                    <select id="cust-area" class="form-control">
+                    <label>Area</label>
+                    <select id="c-area" class="form-control">
                         <option value="Telco">Telco</option>
                         <option value="Birsanagar">Birsanagar</option>
                         <option value="Azad Market">Azad Market</option>
@@ -96,267 +86,297 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Service & Base Charge</label>
-                    <select id="cust-service" class="form-control">
-                        <option value="Switch / Socket Repair - ₹99" data-price="99">Switch / Socket Repair — ₹99</option>
-                        <option value="Fan / Light Installation - ₹149" data-price="149">Fan / Light Installation — ₹149</option>
-                        <option value="MCB / Fuse / Main Board - ₹199" data-price="199">MCB / Fuse / Main Board — ₹199</option>
-                        <option value="Inverter / House Wiring - ₹299" data-price="299">Inverter / House Wiring — ₹299</option>
+                    <label>Service & Rate</label>
+                    <select id="c-service" class="form-control">
+                        <option value="Switch / Socket Repair - ₹99" data-p="99">Switch / Socket Repair — ₹99</option>
+                        <option value="Fan / Light Installation - ₹149" data-p="149">Fan / Light Installation — ₹149</option>
+                        <option value="MCB / Fuse Repair - ₹199" data-p="199">MCB / Fuse Repair — ₹199</option>
+                        <option value="House Wiring / Inverter - ₹299" data-p="299">House Wiring / Inverter — ₹299</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Google Maps Location</label>
-                    <button type="button" class="btn btn-outline" style="margin-bottom:0.4rem;" onclick="captureLocation()">📍 Capture My GPS Location</button>
-                    <input type="text" id="cust-map" class="form-control" placeholder="GPS link will appear here..." readonly>
+                    <label>Location</label>
+                    <button class="btn btn-outline" style="margin-bottom:0.4rem;" onclick="getGPS()">📍 Get My GPS Location</button>
+                    <input type="text" id="c-map" class="form-control" placeholder="GPS link..." readonly>
                 </div>
-                <div class="form-group">
-                    <label>Payment Mode</label>
-                    <select id="cust-pay" class="form-control">
-                        <option value="UPI / Online (Auto-Split)">UPI / Online App Payment</option>
-                        <option value="Cash After Service">Cash After Service</option>
-                    </select>
-                </div>
-
-                <button class="btn btn-customer" onclick="submitBooking()">🚨 Book Now & Alert Nearby Partners</button>
+                <button class="btn btn-customer" onclick="bookOrder()">🚨 Book Now</button>
             </div>
 
-            <!-- Active Customer Order Tracker -->
-            <div id="cust-active-order" class="hidden">
+            <div id="cust-active" class="hidden">
                 <div class="order-box">
-                    <h3>✅ Booking Broadcasted!</h3>
-                    <p id="cust-order-summary"></p>
-                    <p style="color: var(--primary-dark); font-weight: 600;">📡 Searching Partners within 2.5 km radius first...</p>
+                    <h3>✅ Booking Active</h3>
+                    <p id="c-summary"></p>
                 </div>
-                <button class="btn btn-success" onclick="alert('UPI Payment Gateway Simulated: Paid Successfully!')">💳 Pay Now via App</button>
-                <button class="btn btn-danger" onclick="cancelCustomerOrder()">❌ Cancel Booking (10-Min Window)</button>
+                <button class="btn btn-danger" onclick="cancelOrder()">❌ Cancel Booking</button>
             </div>
 
-            <button class="back-btn" onclick="switchPortal('home')">← Back to Home</button>
+            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
 
-        <!-- PARTNER VIEW -->
+        <!-- PARTNER -->
         <div id="partner-view" class="card hidden">
-            <!-- Step 1: Phone & OTP -->
-            <div id="partner-step-1">
-                <h2>Partner Verification</h2>
-                <p class="subtitle">Step 1: Verify your mobile number</p>
+            <div id="p-step1">
+                <h2>Partner Login</h2>
+                <p class="subtitle">Enter Mobile & OTP (0403)</p>
                 <div class="form-group">
-                    <label>Partner Mobile Number</label>
-                    <input type="tel" id="part-phone" class="form-control" placeholder="Enter 10-digit mobile number">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="p-mob" class="form-control" placeholder="Mobile no">
                 </div>
-                <button class="btn btn-outline" onclick="alert('OTP Sent to your mobile! (Use demo OTP: 0403)')">📩 Send OTP</button>
                 <div class="form-group">
-                    <label>Enter 4-Digit OTP</label>
-                    <input type="password" id="partner-otp" class="form-control" placeholder="Enter OTP (0403)">
+                    <label>Enter OTP</label>
+                    <input type="password" id="p-otp" class="form-control" placeholder="Enter 0403">
                 </div>
-                <button class="btn btn-partner" onclick="verifyPartnerStep1()">Verify OTP & Continue →</button>
+                <button class="btn btn-partner" onclick="verifyPartner()">Login →</button>
             </div>
 
-            <!-- Step 2: Profile & Bank Details -->
-            <div id="partner-step-2" class="hidden">
-                <h2>Partner Profile & Bank KYC</h2>
-                <p class="subtitle">Step 2: Complete profile for direct payouts</p>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="part-name" class="form-control" placeholder="e.g. Rajesh Kumar">
-                </div>
-                <div class="form-group">
-                    <label>Full Home Address</label>
-                    <input type="text" id="part-address" class="form-control" placeholder="e.g. Zone 3, Birsanagar">
-                </div>
-                <div class="form-group">
-                    <label>Experience (Years / Days)</label>
-                    <input type="text" id="part-exp" class="form-control" placeholder="e.g. 4 Years 6 Months">
-                </div>
-                <div class="form-group">
-                    <label>Aadhaar / ID Number</label>
-                    <input type="text" id="part-id" class="form-control" placeholder="12-digit Aadhaar number">
-                </div>
-                <div class="form-group">
-                    <label>Bank Account Number (For Payouts)</label>
-                    <input type="text" id="part-bank" class="form-control" placeholder="Account Number">
-                </div>
-                <div class="form-group">
-                    <label>Bank IFSC Code</label>
-                    <input type="text" id="part-ifsc" class="form-control" placeholder="e.g. SBIN0001234">
-                </div>
-                <button class="btn btn-success" onclick="savePartnerProfile()">Save & Open Dashboard</button>
-            </div>
-
-            <!-- Step 3: Partner Live Dashboard -->
-            <div id="partner-dashboard" class="hidden">
+            <div id="p-dash" class="hidden">
                 <div class="status-bar">
                     <div>
-                        <strong id="dash-part-name">Partner</strong>
-                        <div style="font-size:0.75rem; color:var(--gray);" id="dash-part-exp">Verified Electrician</div>
+                        <strong id="p-disp-name">Partner</strong>
+                        <div style="font-size:0.75rem; color:var(--gray);">Verified Electrician</div>
                     </div>
-                    <button id="online-toggle" class="toggle-btn offline" onclick="togglePartnerStatus()">🔴 OFFLINE</button>
+                    <button id="p-toggle" class="toggle-btn offline" onclick="toggleOnline()">🔴 OFFLINE</button>
                 </div>
 
-                <div class="grid-2" style="margin-bottom: 1rem;">
-                    <div class="stat-box">
-                        <span id="part-net-earn">₹0</span>
-                        <small>Your Net Payout (80%)</small>
-                    </div>
-                    <div class="stat-box">
-                        <span id="part-comm-due">₹0</span>
-                        <small>Admin Share (20%)</small>
-                    </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:1rem; text-align:center;">
+                    <div style="background:#f1f5f9; padding:0.6rem; border-radius:0.5rem;"><strong id="p-earn">₹0</strong><br><small>Earned (80%)</small></div>
+                    <div style="background:#f1f5f9; padding:0.6rem; border-radius:0.5rem;"><strong id="p-due">₹0</strong><br><small>Admin (20%)</small></div>
                 </div>
 
-                <div id="partner-siren-box" class="alert-siren hidden">
-                    🚨 NEW ORDER ALERT! SIREN ACTIVE 🚨
-                    <div style="font-size:0.75rem; font-weight:400; margin-top:0.25rem;" id="radius-timer">2.5 km Priority Zone • Broadcast to all in 02:00</div>
-                </div>
-
-                <div id="partner-order-area">
-                    <p style="text-align:center; color:var(--gray); font-size:0.85rem; padding:1.5rem 0;">Turn ONLINE to receive customer complaints.</p>
+                <div id="p-alert" class="alert-box hidden">🚨 NEW ORDER IN 2.5KM RADIUS!</div>
+                <div id="p-ord-area">
+                    <p style="text-align:center; color:var(--gray); padding:1rem;">Turn ONLINE to receive orders.</p>
                 </div>
             </div>
 
-            <button class="back-btn" onclick="stopSiren(); switchPortal('home')">← Back to Home</button>
+            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
 
-        <!-- ADMIN VIEW -->
+        <!-- ADMIN -->
         <div id="admin-view" class="card hidden">
-            <div id="admin-login-box">
-                <h2>Owner Admin Panel</h2>
-                <p class="subtitle">24/7 Live Dispatch & Commission Monitor</p>
+            <div id="a-login">
+                <h2>Owner Admin</h2>
+                <p class="subtitle">Enter PIN (2822)</p>
                 <div class="form-group">
-                    <label>Owner PIN</label>
-                    <input type="password" id="admin-pin" class="form-control" placeholder="Enter PIN (2822)">
+                    <label>Admin PIN</label>
+                    <input type="password" id="a-pin" class="form-control" placeholder="PIN 2822">
                 </div>
-                <button class="btn btn-partner" onclick="verifyAdmin()">Access Owner Dashboard</button>
+                <button class="btn btn-partner" onclick="verifyAdmin()">Access Admin</button>
             </div>
 
-            <div id="admin-dashboard" class="hidden">
-                <h2>👑 Owner Live Control</h2>
-                <p class="subtitle">Receives all complaints 24/7 (View & Monitor Only)</p>
-
-                <div class="grid-2" style="margin-bottom: 1rem;">
-                    <div class="stat-box">
-                        <span id="admin-total-orders">0</span>
-                        <small>Active / Total Orders</small>
-                    </div>
-                    <div class="stat-box">
-                        <span id="admin-total-comm" style="color:var(--success);">₹0</span>
-                        <small>Your Auto-Commission (20%)</small>
-                    </div>
+            <div id="a-dash" class="hidden">
+                <h2>👑 Owner Dashboard</h2>
+                <p class="subtitle">Live Commission & Orders Monitor</p>
+                <div style="background:#f1f5f9; padding:0.8rem; border-radius:0.5rem; text-align:center; margin-bottom:1rem;">
+                    <strong style="font-size:1.2rem; color:var(--success);" id="a-comm">₹0</strong><br><small>Total Admin Commission (20%)</small>
                 </div>
-
-                <div id="admin-siren-box" class="alert-siren hidden">
-                    🔔 NEW CUSTOMER COMPLAINT RECEIVED!
-                    <button onclick="stopSiren()" style="margin-left:0.5rem; padding:0.2rem 0.5rem; border:none; border-radius:0.3rem; background:white; color:var(--danger); font-weight:700; cursor:pointer;">Mute Siren</button>
-                </div>
-
-                <div id="admin-orders-list">
-                    <p style="text-align:center; color:var(--gray); font-size:0.85rem; padding:1rem 0;">No customer complaints yet.</p>
+                <div id="a-list">
+                    <p style="text-align:center; color:var(--gray);">No active orders.</p>
                 </div>
             </div>
 
-            <button class="back-btn" onclick="stopSiren(); switchPortal('home')">← Back to Home</button>
+            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
     </div>
 
     <script>
-        // --- AUDIO SIREN ENGINE (Web Audio API - Zero External Files Needed) ---
-        let audioCtx = null;
-        let sirenInterval = null;
-
-        function playSiren() {
-            stopSiren();
-            try {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                let high = true;
-                sirenInterval = setInterval(() => {
-                    const osc = audioCtx.createOscillator();
-                    const gain = audioCtx.createGain();
-                    osc.type = 'sawtooth';
-                    osc.frequency.setValueAtTime(high ? 880 : 620, audioCtx.currentTime);
-                    gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
-                    osc.connect(gain);
-                    gain.connect(audioCtx.destination);
-                    osc.start();
-                    osc.stop(audioCtx.currentTime + 0.35);
-                    high = !high;
-                }, 400);
-            } catch (e) { console.log("Audio requires user interaction first"); }
-        }
-
-        function stopSiren() {
-            if (sirenInterval) clearInterval(sirenInterval);
-            sirenInterval = null;
-        }
-
-        // --- APP STATE (Saved in LocalStorage for Multi-Portal Testing) ---
-        let partnerOnline = false;
-        let timerInterval = null;
-
-        function getOrder() {
-            const data = localStorage.getItem('pc0403_order');
-            return data ? JSON.parse(data) : null;
-        }
-
-        function saveOrder(order) {
-            if (order) localStorage.setItem('pc0403_order', JSON.stringify(order));
-            else localStorage.removeItem('pc0403_order');
-        }
-
-        function getPartner() {
-            const data = localStorage.getItem('pc0403_partner');
-            return data ? JSON.parse(data) : null;
-        }
-
-        // --- PORTAL NAVIGATION ---
-        function switchPortal(portal) {
-            stopSiren();
+        function goTo(view) {
             document.getElementById('home-view').classList.add('hidden');
             document.getElementById('customer-view').classList.add('hidden');
             document.getElementById('partner-view').classList.add('hidden');
             document.getElementById('admin-view').classList.add('hidden');
 
-            if (portal === 'customer') {
+            if (view === 'customer') {
                 document.getElementById('customer-view').classList.remove('hidden');
-                renderCustomerView();
-            } else if (portal === 'partner') {
+                updateCustUI();
+            } else if (view === 'partner') {
                 document.getElementById('partner-view').classList.remove('hidden');
-                const p = getPartner();
-                if (p && p.verified) {
-                    document.getElementById('partner-step-1').classList.add('hidden');
-                    document.getElementById('partner-step-2').classList.add('hidden');
-                    document.getElementById('partner-dashboard').classList.remove('hidden');
-                    renderPartnerDashboard();
+                if (localStorage.getItem('p_logged')) {
+                    document.getElementById('p-step1').classList.add('hidden');
+                    document.getElementById('p-dash').classList.remove('hidden');
+                    updatePartnerUI();
                 }
-            } else if (portal === 'admin') {
+            } else if (view === 'admin') {
                 document.getElementById('admin-view').classList.remove('hidden');
             } else {
                 document.getElementById('home-view').classList.remove('hidden');
             }
         }
 
-        // --- CUSTOMER FUNCTIONS ---
-        function captureLocation() {
-            const mapInput = document.getElementById('cust-map');
-            mapInput.value = "Fetching GPS...";
+        function getGPS() {
+            const m = document.getElementById('c-map');
+            m.value = "Fetching GPS...";
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    (pos) => {
-                        mapInput.value = `https://maps.google.com/?q=${pos.coords.latitude},${pos.coords.longitude}`;
-                    },
-                    () => {
-                        const area = document.getElementById('cust-area').value;
-                        mapInput.value = `https://maps.google.com/?q=${encodeURIComponent(area + ' Jamshedpur')}`;
-                    }
+                    pos => m.value = `https://maps.google.com/?q=${pos.coords.latitude},${pos.coords.longitude}`,
+                    () => m.value = `https://maps.google.com/?q=Jamshedpur`
                 );
             } else {
-                const area = document.getElementById('cust-area').value;
-                mapInput.value = `https://maps.google.com/?q=${encodeURIComponent(area + ' Jamshedpur')}`;
+                m.value = `https://maps.google.com/?q=Jamshedpur`;
             }
         }
 
-        function submitBooking() {
-            const name = document.getElementById('cust-name').value.trim();
-            const phone = document.getElementById('cust-phone').value.trim();
-            const area = document.getElementById('cust-area').value;
-            const serviceSel = document.getElementById('cust-service');
-            cons
+        function bookOrder() {
+            const name = document.getElementById('c-name').value.trim();
+            const phone = document.getElementById('c-phone').value.trim();
+            const area = document.getElementById('c-area').value;
+            const sSel = document.getElementById('c-service');
+            const service = sSel.value;
+            const price = parseInt(sSel.options[sSel.selectedIndex].getAttribute('data-p'));
+            const map = document.getElementById('c-map').value || 'https://maps.google.com/?q=Jamshedpur';
+
+            if (!name || !phone) { alert('Naam aur mobile number bharein!'); return; }
+
+            const order = {
+                id: 'ORD-' + Math.floor(1000 + Math.random() * 9000),
+                name, phone, area, service, price, map,
+                status: 'PENDING',
+                partner: null
+            };
+            localStorage.setItem('pc_order', JSON.stringify(order));
+            updateCustUI();
+            alert('Booking Successful!');
+        }
+
+        function updateCustUI() {
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            if (order && order.status !== 'COMPLETED') {
+                document.getElementById('cust-form').classList.add('hidden');
+                document.getElementById('cust-active').classList.remove('hidden');
+                document.getElementById('c-summary').innerHTML = `ID: ${order.id}<br>Service: ${order.service}<br>Status: <strong>${order.status}</strong>`;
+            } else {
+                document.getElementById('cust-form').classList.remove('hidden');
+                document.getElementById('cust-active').classList.add('hidden');
+            }
+        }
+
+        function cancelOrder() {
+            if (confirm('Cancel booking?')) {
+                localStorage.removeItem('pc_order');
+                updateCustUI();
+            }
+        }
+
+        function verifyPartner() {
+            const otp = document.getElementById('p-otp').value.trim();
+            if (otp !== '0403') { alert('Galat OTP! 0403 dalein.'); return; }
+            localStorage.setItem('p_logged', 'true');
+            document.getElementById('p-step1').classList.add('hidden');
+            document.getElementById('p-dash').classList.remove('hidden');
+            updatePartnerUI();
+        }
+
+        let isOnline = false;
+        function toggleOnline() {
+            isOnline = !isOnline;
+            const btn = document.getElementById('p-toggle');
+            if (isOnline) {
+                btn.className = 'toggle-btn online';
+                btn.innerText = '🟢 ONLINE';
+            } else {
+                btn.className = 'toggle-btn offline';
+                btn.innerText = '🔴 OFFLINE';
+            }
+            updatePartnerUI();
+        }
+
+        function updatePartnerUI() {
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            const area = document.getElementById('p-ord-area');
+            const alertBox = document.getElementById('p-alert');
+            const earn = parseInt(localStorage.getItem('p_earn') || '0');
+            const due = parseInt(localStorage.getItem('p_due') || '0');
+
+            document.getElementById('p-earn').innerText = '₹' + earn;
+            document.getElementById('p-due').innerText = '₹' + due;
+
+            if (order && order.status === 'ACCEPTED') {
+                alertBox.classList.add('hidden');
+                area.innerHTML = `
+                    <div class="order-box">
+                        <h3>🛠️ Active Job</h3>
+                        <p>Customer: ${order.name} (${order.phone})</p>
+                        <p>Service: ${order.service}</p>
+                        <a href="${order.mapLink || order.map}" target="_blank" class="btn btn-outline" style="margin-top:0.4rem;">📍 Open Map</a>
+                        <button class="btn btn-success" style="margin-top:0.4rem;" onclick="endJob()">✅ Complete & End Job</button>
+                    </div>
+                `;
+                return;
+            }
+
+            if (!isOnline) {
+                alertBox.classList.add('hidden');
+                area.innerHTML = `<p style="text-align:center; color:var(--gray); padding:1rem;">Aap OFFLINE hain.</p>`;
+                return;
+            }
+
+            if (order && order.status === 'PENDING') {
+                alertBox.classList.remove('hidden');
+                area.innerHTML = `
+                    <div class="order-box">
+                        <h3>⚡ New Order (${order.area})</h3>
+                        <p>Service: ${order.service}</p>
+                        <button class="btn btn-partner" style="margin-top:0.4rem;" onclick="acceptOrder()">✅ Accept Order</button>
+                    </div>
+                `;
+            } else {
+                alertBox.classList.add('hidden');
+                area.innerHTML = `<p style="text-align:center; color:var(--success); padding:1rem;">🟢 Online & Ready for orders...</p>`;
+            }
+        }
+
+        function acceptOrder() {
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            if (!order) return;
+            order.status = 'ACCEPTED';
+            localStorage.setItem('pc_order', JSON.stringify(order));
+            updatePartnerUI();
+            alert('Order Accepted!');
+        }
+
+        function endJob() {
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            if (!order) return;
+            const adminShare = Math.round(order.price * 0.20);
+            const partShare = order.price - adminShare;
+
+            let earn = parseInt(localStorage.getItem('p_earn') || '0') + partShare;
+            let due = parseInt(localStorage.getItem('p_due') || '0') + adminShare;
+            let totalComm = parseInt(localStorage.getItem('pc_admin_comm') || '0') + adminShare;
+
+            localStorage.setItem('p_earn', earn);
+            localStorage.setItem('p_due', due);
+            localStorage.setItem('pc_admin_comm', totalComm);
+
+            order.status = 'COMPLETED';
+            localStorage.setItem('pc_order', JSON.stringify(order));
+            updatePartnerUI();
+            alert(`Job Finished! Payout: ₹${partShare}, Admin Comm (20%): ₹${adminShare}`);
+        }
+
+        function verifyAdmin() {
+            const pin = document.getElementById('a-pin').value.trim();
+            if (pin !== '2822') { alert('Galat PIN! 2822 dalein.'); return; }
+            document.getElementById('a-login').classList.add('hidden');
+            document.getElementById('a-dash').classList.remove('hidden');
+            
+            const totalComm = localStorage.getItem('pc_admin_comm') || '0';
+            document.getElementById('a-comm').innerText = '₹' + totalComm;
+            
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            const list = document.getElementById('a-list');
+            if (order && order.status !== 'COMPLETED') {
+                list.innerHTML = `
+                    <div class="order-box">
+                        <h3>📋 Order: ${order.id} [${order.status}]</h3>
+                        <p>Customer: ${order.name} (${order.phone})</p>
+                        <p>Area: ${order.area} | Service: ${order.service}</p>
+                    </div>
+                `;
+            } else {
+                list.innerHTML = `<p style="text-align:center; color:var(--gray);">No active complaints.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
