@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Care 0403.com | Electrician & Appliance Service</title>
+    <title>Power Care 0403.com | Electrician & Appliance Hub</title>
     <style>
         :root {
             --primary: #f59e0b;
@@ -50,7 +50,7 @@
 
     <header>
         <h1>Power Care 0403.com</h1>
-        <p>On-Demand Electrician & Appliance Hub</p>
+        <p>Jamshedpur Electrician & Appliance Hub</p>
         <div style="font-size: 0.75rem; color: #fef08a; margin-top: 0.3rem;">🛡️ 15-Day Workmanship Warranty</div>
     </header>
 
@@ -89,28 +89,20 @@
                         <option value="Bistupur">Bistupur</option>
                         <option value="Mango">Mango</option>
                         <option value="Sonari">Sonari</option>
-                        <option value="Kadma">Kadma</option>
-                        <option value="Jugsalai">Jugsalai</option>
-                        <option value="Baridih">Baridih</option>
-                        <option value="Sidhgora">Sidhgora</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Service & Rate Card</label>
+                    <label>Complaint / Service Option</label>
                     <select id="c-service" class="form-control">
-                        <optgroup label="Electrical Work">
-                            <option value="Switch / Socket Repair - ₹99" data-p="99">Switch / Socket Repair — ₹99</option>
-                            <option value="Fan / Light Installation - ₹149" data-p="149">Fan / Light Installation — ₹149</option>
-                            <option value="MCB / Fuse Repair - ₹199" data-p="199">MCB / Fuse Repair — ₹199</option>
-                            <option value="House Wiring / Inverter - ₹299" data-p="299">House Wiring / Inverter — ₹299</option>
-                        </optgroup>
-                        <optgroup label="Appliances & Full Work">
-                            <option value="AC Repair / Service - ₹499" data-p="499">AC Repair / Service — ₹499</option>
-                            <option value="Geyser Repair / Install - ₹299" data-p="299">Geyser Repair / Install — ₹299</option>
-                            <option value="Washing Machine Repair - ₹349" data-p="349">Washing Machine Repair — ₹349</option>
-                            <option value="Fridge / Refrigerator Repair - ₹399" data-p="399">Fridge / Refrigerator Repair — ₹399</option>
-                            <option value="All Electrical & Appliance Work - ₹449" data-p="449">All Electrical & Appliance Work — ₹449</option>
-                        </optgroup>
+                        <option value="Switch / Socket Repair - ₹99" data-p="99">Switch / Socket Repair — ₹99</option>
+                        <option value="Fan / Light Installation - ₹149" data-p="149">Fan / Light Installation — ₹149</option>
+                        <option value="MCB / Fuse Repair - ₹199" data-p="199">MCB / Fuse Repair — ₹199</option>
+                        <option value="House Wiring / Inverter - ₹299" data-p="299">House Wiring / Inverter — ₹299</option>
+                        <option value="AC Repair & Service - ₹499" data-p="499">AC Repair & Service — ₹499</option>
+                        <option value="Geyser Repair & Install - ₹299" data-p="299">Geyser Repair & Install — ₹299</option>
+                        <option value="Washing Machine Repair - ₹349" data-p="349">Washing Machine Repair — ₹349</option>
+                        <option value="Fridge / Refrigerator Repair - ₹399" data-p="399">Fridge / Refrigerator Repair — ₹399</option>
+                        <option value="All Electrical & Appliance Work - ₹449" data-p="449">All Electrical & Appliance Work — ₹449</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -146,7 +138,7 @@
                     <input type="tel" id="p-mob" class="form-control" placeholder="Mobile no">
                 </div>
                 <div class="form-group">
-                    <label>Kaun-kaun se kaam aate hain? (Select Skills)</label>
+                    <label>Kaun-kaun se kaam aate hain?</label>
                     <div class="checkbox-group">
                         <label><input type="checkbox" class="p-skill" value="Sirf Wiring"> Sirf Wiring</label>
                         <label><input type="checkbox" class="p-skill" value="Sirf AC"> Sirf AC</label>
@@ -483,4 +475,67 @@
             order.status = 'ACCEPTED';
             localStorage.setItem('pc_order', JSON.stringify(order));
             stopSirenSound();
-            updatePartner
+            updatePartnerUI();
+            alert('Order Accepted Successfully!');
+        }
+
+        function endJob() {
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            if (!order) return;
+            const adminShare = Math.round(order.price * 0.20);
+            const partShare = order.price - adminShare;
+
+            let earn = parseInt(localStorage.getItem('p_earn') || '0') + partShare;
+            let due = parseInt(localStorage.getItem('p_due') || '0') + adminShare;
+            let totalComm = parseInt(localStorage.getItem('pc_admin_comm') || '0') + adminShare;
+
+            localStorage.setItem('p_earn', earn);
+            localStorage.setItem('p_due', due);
+            localStorage.setItem('pc_admin_comm', totalComm);
+
+            order.status = 'COMPLETED';
+            localStorage.setItem('pc_order', JSON.stringify(order));
+            updatePartnerUI();
+            alert(`Job Finished! Partner Payout: ₹${partShare}, Admin Share (20%): ₹${adminShare}`);
+        }
+
+        function verifyAdmin() {
+            initAudio();
+            const pin = document.getElementById('a-pin').value.trim();
+            if (pin !== '2822') {
+                alert('Galat PIN! 2822 dalein.');
+                return;
+            }
+            document.getElementById('a-login').classList.add('hidden');
+            document.getElementById('a-dash').classList.remove('hidden');
+
+            const totalComm = localStorage.getItem('pc_admin_comm') || '0';
+            document.getElementById('a-comm').innerText = '₹' + totalComm;
+
+            const order = JSON.parse(localStorage.getItem('pc_order'));
+            const list = document.getElementById('a-list');
+            const alertBox = document.getElementById('a-alert');
+
+            if (order && order.status !== 'COMPLETED') {
+                if (order.status === 'PENDING') {
+                    alertBox.classList.remove('hidden');
+                    playSirenSound();
+                } else {
+                    alertBox.classList.add('hidden');
+                }
+                list.innerHTML = `
+                    <div class="order-box">
+                        <h3>📋 Order: ${order.id} [${order.status}]</h3>
+                        <p>Customer: ${order.name} (${order.phone})</p>
+                        <p>Area: ${order.area} | Service: ${order.service}</p>
+                    </div>
+                `;
+            } else {
+                alertBox.classList.add('hidden');
+                stopSirenSound();
+                list.innerHTML = `<p style="text-align:center; color:var(--gray);">No active bookings right now.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
