@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Care 0403.com | Jamshedpur Electrician & Appliance Hub</title>
+    <title>Power Care 0403.com | Electrician & Appliance Service</title>
     <style>
         :root {
             --primary: #f59e0b;
@@ -22,7 +22,7 @@
         .card { background: white; padding: 1.25rem; border-radius: 1rem; box-shadow: 0 4px 10px rgb(0 0 0 / 0.08); margin-bottom: 1rem; }
         h2 { font-size: 1.2rem; margin-bottom: 0.5rem; text-align: center; }
         .subtitle { font-size: 0.82rem; color: var(--gray); margin-bottom: 1rem; text-align: center; }
-        .btn { display: block; width: 100%; padding: 0.9rem; margin-bottom: 0.75rem; border: none; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: center; }
+        .btn { display: block; width: 100%; padding: 0.9rem; margin-bottom: 0.75rem; border: none; border-radius: 0.75rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; }
         .btn-customer { background: var(--primary); color: var(--dark); }
         .btn-partner { background: var(--dark); color: white; }
         .btn-admin { background: #e2e8f0; color: var(--dark); }
@@ -31,9 +31,9 @@
         .btn-outline { background: white; border: 1.5px solid #cbd5e1; color: var(--dark); }
         .form-group { margin-bottom: 0.85rem; text-align: left; }
         .form-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.3rem; }
-        .form-control { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 0.5rem; font-size: 0.95rem; }
-        .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.85rem; background: #f8fafc; padding: 0.6rem; border-radius: 0.5rem; border: 1px solid #cbd5e1; }
-        .checkbox-group label { display: flex; align-items: center; gap: 0.3rem; font-weight: normal; cursor: pointer; }
+        .form-control { width: 100%; padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 0.5rem; font-size: 0.95rem; background: white; }
+        .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; font-size: 0.85rem; background: #f8fafc; padding: 0.65rem; border-radius: 0.5rem; border: 1px solid #cbd5e1; }
+        .checkbox-group label { display: flex; align-items: center; gap: 0.35rem; font-weight: normal; cursor: pointer; margin-bottom: 0; }
         .hidden { display: none !important; }
         .back-btn { background: none; border: none; color: var(--gray); font-size: 0.85rem; margin-top: 0.5rem; cursor: pointer; text-decoration: underline; width: 100%; text-align: center; display: block; }
         .status-bar { display: flex; justify-content: space-between; align-items: center; background: #f1f5f9; padding: 0.75rem; border-radius: 0.75rem; margin-bottom: 1rem; }
@@ -50,7 +50,7 @@
 
     <header>
         <h1>Power Care 0403.com</h1>
-        <p>Jamshedpur On-Demand Expert Services</p>
+        <p>On-Demand Electrician & Appliance Hub</p>
         <div style="font-size: 0.75rem; color: #fef08a; margin-top: 0.3rem;">🛡️ 15-Day Workmanship Warranty</div>
     </header>
 
@@ -59,16 +59,16 @@
         <div id="home-view" class="card">
             <h2>Welcome to Power Care</h2>
             <p class="subtitle">Select your portal to continue</p>
-            <button class="btn btn-customer" onclick="goTo('customer')">👤 Customer Portal</button>
-            <button class="btn btn-partner" onclick="goTo('partner')">⚡ Partner Portal</button>
-            <button class="btn btn-admin" onclick="goTo('admin')">🔒 Owner Admin Panel</button>
+            <button type="button" class="btn btn-customer" onclick="goTo('customer')">👤 Customer Portal</button>
+            <button type="button" class="btn btn-partner" onclick="goTo('partner')">⚡ Partner Portal</button>
+            <button type="button" class="btn btn-admin" onclick="goTo('admin')">🔒 Owner Admin Panel</button>
         </div>
 
         <!-- CUSTOMER -->
         <div id="customer-view" class="card hidden">
-            <h2>Book Professional</h2>
+            <h2>Book Service / Complaint</h2>
             <p class="subtitle">10-Min Free Cancellation • Fast Dispatch</p>
-            
+
             <div id="cust-form">
                 <div class="form-group">
                     <label>Your Name</label>
@@ -79,7 +79,7 @@
                     <input type="tel" id="c-phone" class="form-control" placeholder="10-digit number">
                 </div>
                 <div class="form-group">
-                    <label>Select Jamshedpur Area</label>
+                    <label>Select Area</label>
                     <select id="c-area" class="form-control">
                         <option value="Telco">Telco</option>
                         <option value="Birsanagar">Birsanagar</option>
@@ -96,28 +96,29 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Select Service & Rate Card</label>
+                    <label>Service & Rate Card</label>
                     <select id="c-service" class="form-control">
-                        <optgroup label="Electrical Works">
+                        <optgroup label="Electrical Work">
                             <option value="Switch / Socket Repair - ₹99" data-p="99">Switch / Socket Repair — ₹99</option>
                             <option value="Fan / Light Installation - ₹149" data-p="149">Fan / Light Installation — ₹149</option>
                             <option value="MCB / Fuse Repair - ₹199" data-p="199">MCB / Fuse Repair — ₹199</option>
                             <option value="House Wiring / Inverter - ₹299" data-p="299">House Wiring / Inverter — ₹299</option>
                         </optgroup>
-                        <optgroup label="Home Appliances">
+                        <optgroup label="Appliances & Full Work">
                             <option value="AC Repair / Service - ₹499" data-p="499">AC Repair / Service — ₹499</option>
                             <option value="Geyser Repair / Install - ₹299" data-p="299">Geyser Repair / Install — ₹299</option>
                             <option value="Washing Machine Repair - ₹349" data-p="349">Washing Machine Repair — ₹349</option>
-                            <option value="Refrigerator Repair - ₹399" data-p="399">Refrigerator Repair — ₹399</option>
+                            <option value="Fridge / Refrigerator Repair - ₹399" data-p="399">Fridge / Refrigerator Repair — ₹399</option>
+                            <option value="All Electrical & Appliance Work - ₹449" data-p="449">All Electrical & Appliance Work — ₹449</option>
                         </optgroup>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Location GPS</label>
-                    <button class="btn btn-outline" style="margin-bottom:0.4rem;" onclick="getGPS()">📍 Get My GPS Location</button>
+                    <button type="button" class="btn btn-outline" style="margin-bottom:0.4rem;" onclick="getGPS()">📍 Get My GPS Location</button>
                     <input type="text" id="c-map" class="form-control" placeholder="GPS link..." readonly>
                 </div>
-                <button class="btn btn-customer" onclick="bookOrder()">🚨 Book Now & Alert Partners</button>
+                <button type="button" class="btn btn-customer" onclick="bookOrder()">🚨 Book Now & Alert Partners</button>
             </div>
 
             <div id="cust-active" class="hidden">
@@ -125,18 +126,17 @@
                     <h3>✅ Booking Active</h3>
                     <p id="c-summary"></p>
                 </div>
-                <button class="btn btn-danger" onclick="cancelOrder()">❌ Cancel Booking</button>
+                <button type="button" class="btn btn-danger" onclick="cancelOrder()">❌ Cancel Booking</button>
             </div>
 
-            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
+            <button type="button" class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
 
         <!-- PARTNER -->
         <div id="partner-view" class="card hidden">
-            <!-- STEP 1: LOGIN / REGISTER -->
             <div id="p-step1">
-                <h2>Partner Portal</h2>
-                <p class="subtitle">Register / Login with OTP (0403)</p>
+                <h2>Partner Registration & Login</h2>
+                <p class="subtitle">Select skills & login with OTP (0403)</p>
                 <div class="form-group">
                     <label>Partner Name</label>
                     <input type="text" id="p-name" class="form-control" placeholder="Your full name">
@@ -146,32 +146,33 @@
                     <input type="tel" id="p-mob" class="form-control" placeholder="Mobile no">
                 </div>
                 <div class="form-group">
-                    <label>Select Your Expertise / Skills</label>
+                    <label>Kaun-kaun se kaam aate hain? (Select Skills)</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" class="p-skill" value="Electrical Wiring"> Electrical Wiring</label>
-                        <label><input type="checkbox" class="p-skill" value="AC Repair"> AC Repair</label>
-                        <label><input type="checkbox" class="p-skill" value="Geyser Repair"> Geyser</label>
+                        <label><input type="checkbox" class="p-skill" value="Sirf Wiring"> Sirf Wiring</label>
+                        <label><input type="checkbox" class="p-skill" value="Sirf AC"> Sirf AC</label>
+                        <label><input type="checkbox" class="p-skill" value="Geyser"> Geyser</label>
                         <label><input type="checkbox" class="p-skill" value="Washing Machine"> Washing Machine</label>
-                        <label><input type="checkbox" class="p-skill" value="Refrigerator"> Refrigerator</label>
-                        <label><input type="checkbox" class="p-skill" value="All Appliance"> All Appliances</label>
+                        <label><input type="checkbox" class="p-skill" value="Fridge"> Fridge</label>
+                        <label><input type="checkbox" class="p-skill" value="All Electrical & Appliance"> All Work (Dono)</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Enter OTP</label>
                     <input type="password" id="p-otp" class="form-control" placeholder="Enter 0403">
                 </div>
-                <button class="btn btn-partner" onclick="verifyPartner()">Register & Login →</button>
+                <button type="button" class="btn btn-partner" onclick="verifyPartner()">Register & Login →</button>
             </div>
 
-            <!-- STEP 2: DASHBOARD -->
             <div id="p-dash" class="hidden">
                 <div class="status-bar">
                     <div>
                         <strong id="p-disp-name">Partner</strong>
-                        <div style="font-size:0.75rem; color:var(--gray);" id="p-disp-skills">Expert</div>
+                        <div style="font-size:0.75rem; color:var(--gray);" id="p-disp-skills">Skills</div>
                     </div>
-                    <button id="p-toggle" class="toggle-btn offline" onclick="toggleOnline()">🔴 OFFLINE</button>
+                    <button type="button" id="p-toggle" class="toggle-btn offline" onclick="toggleOnline()">🔴 OFFLINE</button>
                 </div>
+
+                <button type="button" class="btn btn-outline" style="padding:0.55rem; font-size:0.85rem; margin-bottom:0.85rem;" onclick="testSirenManual()">🔊 Test Siren / Stop Siren</button>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:1rem; text-align:center;">
                     <div style="background:#f1f5f9; padding:0.6rem; border-radius:0.5rem;"><strong id="p-earn">₹0</strong><br><small>Earned (80%)</small></div>
@@ -182,9 +183,11 @@
                 <div id="p-ord-area">
                     <p style="text-align:center; color:var(--gray); padding:1rem;">Turn ONLINE to receive orders.</p>
                 </div>
+
+                <button type="button" class="btn btn-outline" style="padding:0.5rem; font-size:0.8rem;" onclick="resetPartnerProfile()">✏️ Change Name / Skills</button>
             </div>
 
-            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
+            <button type="button" class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
 
         <!-- ADMIN -->
@@ -196,7 +199,7 @@
                     <label>Admin PIN</label>
                     <input type="password" id="a-pin" class="form-control" placeholder="PIN 2822">
                 </div>
-                <button class="btn btn-partner" onclick="verifyAdmin()">Access Admin</button>
+                <button type="button" class="btn btn-partner" onclick="verifyAdmin()">Access Admin</button>
             </div>
 
             <div id="a-dash" class="hidden">
@@ -211,48 +214,80 @@
                 </div>
             </div>
 
-            <button class="back-btn" onclick="goTo('home')">← Back to Home</button>
+            <button type="button" class="back-btn" onclick="goTo('home')">← Back to Home</button>
         </div>
     </div>
 
     <script>
-        // Audio Siren Engine
         let audioCtx = null;
         let sirenTimer = null;
+        let isSirenPlaying = false;
 
         function initAudio() {
             if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume().catch(() => {});
             }
         }
 
         function playSirenSound() {
             initAudio();
-            stopSirenSound();
-            if (!audioCtx) return;
+            if (isSirenPlaying) return;
+            isSirenPlaying = true;
             let high = true;
-            sirenTimer = setInterval(() => {
+
+            const beep = () => {
+                if (!audioCtx || !isSirenPlaying) return;
                 try {
+                    if (audioCtx.state === 'suspended') {
+                        audioCtx.resume();
+                    }
                     const osc = audioCtx.createOscillator();
                     const gain = audioCtx.createGain();
                     osc.type = 'sawtooth';
-                    osc.frequency.setValueAtTime(high ? 900 : 600, audioCtx.currentTime);
-                    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(high ? 920 : 580, audioCtx.currentTime);
+                    gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
                     osc.connect(gain);
                     gain.connect(audioCtx.destination);
                     osc.start();
-                    osc.stop(audioCtx.currentTime + 0.3);
+                    osc.stop(audioCtx.currentTime + 0.32);
                     high = !high;
-                } catch(e) {}
-            }, 400);
+                } catch (e) {}
+            };
+
+            beep();
+            sirenTimer = setInterval(beep, 380);
         }
 
         function stopSirenSound() {
-            if (sirenTimer) clearInterval(sirenTimer);
-            sirenTimer = null;
+            isSirenPlaying = false;
+            if (sirenTimer) {
+                clearInterval(sirenTimer);
+                sirenTimer = null;
+            }
+        }
+
+        function testSirenManual() {
+            initAudio();
+            if (isSirenPlaying) {
+                stopSirenSound();
+                alert('Siren band kar diya gaya.');
+            } else {
+                playSirenSound();
+                setTimeout(() => {
+                    if (!document.getElementById('p-alert').classList.contains('hidden')) return;
+                    stopSirenSound();
+                }, 3000);
+            }
         }
 
         function goTo(view) {
+            initAudio();
             stopSirenSound();
             document.getElementById('home-view').classList.add('hidden');
             document.getElementById('customer-view').classList.add('hidden');
@@ -268,6 +303,9 @@
                     document.getElementById('p-step1').classList.add('hidden');
                     document.getElementById('p-dash').classList.remove('hidden');
                     updatePartnerUI();
+                } else {
+                    document.getElementById('p-step1').classList.remove('hidden');
+                    document.getElementById('p-dash').classList.add('hidden');
                 }
             } else if (view === 'admin') {
                 document.getElementById('admin-view').classList.remove('hidden');
@@ -298,7 +336,10 @@
             const price = parseInt(sSel.options[sSel.selectedIndex].getAttribute('data-p'));
             const map = document.getElementById('c-map').value || 'https://maps.google.com/?q=Jamshedpur';
 
-            if (!name || !phone) { alert('Naam aur mobile number bharein!'); return; }
+            if (!name || !phone) {
+                alert('Naam aur mobile number bharein!');
+                return;
+            }
 
             const order = {
                 id: 'ORD-' + Math.floor(1000 + Math.random() * 9000),
@@ -308,7 +349,7 @@
             };
             localStorage.setItem('pc_order', JSON.stringify(order));
             updateCustUI();
-            alert('Booking Successful & Broadcasted to Partners!');
+            alert('Booking Successful! Ab Partner Portal mein jaakar ONLINE karein aur siren check karein.');
         }
 
         function updateCustUI() {
@@ -326,23 +367,34 @@
         function cancelOrder() {
             if (confirm('Cancel booking?')) {
                 localStorage.removeItem('pc_order');
+                stopSirenSound();
                 updateCustUI();
             }
         }
 
         function verifyPartner() {
+            initAudio();
             const name = document.getElementById('p-name').value.trim();
             const otp = document.getElementById('p-otp').value.trim();
-            
-            if (!name) { alert('Apna naam dalein!'); return; }
-            if (otp !== '0403') { alert('Galat OTP! 0403 dalein.'); return; }
+
+            if (!name) {
+                alert('Apna naam dalein!');
+                return;
+            }
+            if (otp !== '0403') {
+                alert('Galat OTP! 0403 dalein.');
+                return;
+            }
 
             const selectedSkills = [];
             document.querySelectorAll('.p-skill:checked').forEach(cb => selectedSkills.push(cb.value));
-            const skillsStr = selectedSkills.length > 0 ? selectedSkills.join(', ') : 'General Electrician';
+            if (selectedSkills.length === 0) {
+                alert('Kam se kam ek skill/kaam select karein!');
+                return;
+            }
 
             localStorage.setItem('p_name', name);
-            localStorage.setItem('p_skills', skillsStr);
+            localStorage.setItem('p_skills', selectedSkills.join(', '));
             localStorage.setItem('p_logged', 'true');
 
             document.getElementById('p-step1').classList.add('hidden');
@@ -350,8 +402,16 @@
             updatePartnerUI();
         }
 
+        function resetPartnerProfile() {
+            stopSirenSound();
+            localStorage.removeItem('p_logged');
+            document.getElementById('p-dash').classList.add('hidden');
+            document.getElementById('p-step1').classList.remove('hidden');
+        }
+
         let isOnline = false;
         function toggleOnline() {
+            initAudio();
             isOnline = !isOnline;
             const btn = document.getElementById('p-toggle');
             if (isOnline) {
@@ -387,7 +447,7 @@
                         <p>Area: ${order.area}</p>
                         <p>Service: ${order.service}</p>
                         <a href="${order.map}" target="_blank" class="btn btn-outline" style="margin-top:0.4rem;">📍 Open Map</a>
-                        <button class="btn btn-success" style="margin-top:0.4rem;" onclick="endJob()">✅ Complete & End Job</button>
+                        <button type="button" class="btn btn-success" style="margin-top:0.4rem;" onclick="endJob()">✅ Complete & End Job</button>
                     </div>
                 `;
                 return;
@@ -396,7 +456,7 @@
             if (!isOnline) {
                 stopSirenSound();
                 alertBox.classList.add('hidden');
-                area.innerHTML = `<p style="text-align:center; color:var(--gray); padding:1rem;">Aap OFFLINE hain.</p>`;
+                area.innerHTML = `<p style="text-align:center; color:var(--gray); padding:1rem;">Aap OFFLINE hain. ONLINE karein.</p>`;
                 return;
             }
 
@@ -407,7 +467,7 @@
                     <div class="order-box">
                         <h3>⚡ New Order (${order.area})</h3>
                         <p>Service: ${order.service}</p>
-                        <button class="btn btn-partner" style="margin-top:0.4rem;" onclick="acceptOrder()">✅ Accept Order</button>
+                        <button type="button" class="btn btn-partner" style="margin-top:0.4rem;" onclick="acceptOrder()">✅ Accept Order</button>
                     </div>
                 `;
             } else {
@@ -423,63 +483,4 @@
             order.status = 'ACCEPTED';
             localStorage.setItem('pc_order', JSON.stringify(order));
             stopSirenSound();
-            updatePartnerUI();
-            alert('Order Accepted Successfully!');
-        }
-
-        function endJob() {
-            const order = JSON.parse(localStorage.getItem('pc_order'));
-            if (!order) return;
-            const adminShare = Math.round(order.price * 0.20);
-            const partShare = order.price - adminShare;
-
-            let earn = parseInt(localStorage.getItem('p_earn') || '0') + partShare;
-            let due = parseInt(localStorage.getItem('p_due') || '0') + adminShare;
-            let totalComm = parseInt(localStorage.getItem('pc_admin_comm') || '0') + adminShare;
-
-            localStorage.setItem('p_earn', earn);
-            localStorage.setItem('p_due', due);
-            localStorage.setItem('pc_admin_comm', totalComm);
-
-            order.status = 'COMPLETED';
-            localStorage.setItem('pc_order', JSON.stringify(order));
-            updatePartnerUI();
-            alert(`Job Finished! Partner Payout: ₹${partShare}, Admin Share (20%): ₹${adminShare}`);
-        }
-
-        function verifyAdmin() {
-            const pin = document.getElementById('a-pin').value.trim();
-            if (pin !== '2822') { alert('Galat PIN! 2822 dalein.'); return; }
-            document.getElementById('a-login').classList.add('hidden');
-            document.getElementById('a-dash').classList.remove('hidden');
-            
-            const totalComm = localStorage.getItem('pc_admin_comm') || '0';
-            document.getElementById('a-comm').innerText = '₹' + totalComm;
-            
-            const order = JSON.parse(localStorage.getItem('pc_order'));
-            const list = document.getElementById('a-list');
-            const alertBox = document.getElementById('a-alert');
-
-            if (order && order.status !== 'COMPLETED') {
-                if(order.status === 'PENDING') {
-                    alertBox.classList.remove('hidden');
-                    playSirenSound();
-                } else {
-                    alertBox.classList.add('hidden');
-                }
-                list.innerHTML = `
-                    <div class="order-box">
-                        <h3>📋 Order: ${order.id} [${order.status}]</h3>
-                        <p>Customer: ${order.name} (${order.phone})</p>
-                        <p>Area: ${order.area} | Service: ${order.service}</p>
-                    </div>
-                `;
-            } else {
-                alertBox.classList.add('hidden');
-                stopSirenSound();
-                list.innerHTML = `<p style="text-align:center; color:var(--gray);">No active bookings right now.</p>`;
-            }
-        }
-    </script>
-</body>
-</html>
+            updatePartner
