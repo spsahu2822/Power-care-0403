@@ -79,7 +79,7 @@
                     <input type="tel" id="c-phone" class="form-control" placeholder="10-digit number">
                 </div>
                 <div class="form-group">
-                    <label>Select Area</label>
+                    <label>Select Location / Area (12 Areas)</label>
                     <select id="c-area" class="form-control">
                         <option value="Telco">Telco</option>
                         <option value="Birsanagar">Birsanagar</option>
@@ -89,10 +89,14 @@
                         <option value="Bistupur">Bistupur</option>
                         <option value="Mango">Mango</option>
                         <option value="Sonari">Sonari</option>
+                        <option value="Kadma">Kadma</option>
+                        <option value="Jugsalai">Jugsalai</option>
+                        <option value="Baridih">Baridih</option>
+                        <option value="Sidhgora">Sidhgora</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Complaint / Service Option</label>
+                    <label>Complaint / Service Option (9 Options)</label>
                     <select id="c-service" class="form-control">
                         <option value="Switch / Socket Repair - ₹99" data-p="99">Switch / Socket Repair — ₹99</option>
                         <option value="Fan / Light Installation - ₹149" data-p="149">Fan / Light Installation — ₹149</option>
@@ -128,7 +132,7 @@
         <div id="partner-view" class="card hidden">
             <div id="p-step1">
                 <h2>Partner Registration & Login</h2>
-                <p class="subtitle">Select skills & login with OTP (0403)</p>
+                <p class="subtitle">Experience, skills & OTP (0403)</p>
                 <div class="form-group">
                     <label>Partner Name</label>
                     <input type="text" id="p-name" class="form-control" placeholder="Your full name">
@@ -136,6 +140,16 @@
                 <div class="form-group">
                     <label>Mobile Number</label>
                     <input type="tel" id="p-mob" class="form-control" placeholder="Mobile no">
+                </div>
+                <div class="form-group">
+                    <label>Kaam Ka Experience (Kitne din / saal ka anubhav hai?)</label>
+                    <select id="p-exp" class="form-control">
+                        <option value="0 - 6 Months (Fresher / New)">0 - 6 Months (Naya / Fresher)</option>
+                        <option value="6 Months - 1 Year">6 Months - 1 Year</option>
+                        <option value="1 - 2 Years">1 - 2 Years</option>
+                        <option value="2 - 5 Years">2 - 5 Years</option>
+                        <option value="5+ Years (Senior Expert)">5+ Years (Senior Expert)</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Kaun-kaun se kaam aate hain?</label>
@@ -159,6 +173,7 @@
                 <div class="status-bar">
                     <div>
                         <strong id="p-disp-name">Partner</strong>
+                        <div style="font-size:0.75rem; color:var(--gray);" id="p-disp-exp">Experience</div>
                         <div style="font-size:0.75rem; color:var(--gray);" id="p-disp-skills">Skills</div>
                     </div>
                     <button type="button" id="p-toggle" class="toggle-btn offline" onclick="toggleOnline()">🔴 OFFLINE</button>
@@ -176,7 +191,7 @@
                     <p style="text-align:center; color:var(--gray); padding:1rem;">Turn ONLINE to receive orders.</p>
                 </div>
 
-                <button type="button" class="btn btn-outline" style="padding:0.5rem; font-size:0.8rem;" onclick="resetPartnerProfile()">✏️ Change Name / Skills</button>
+                <button type="button" class="btn btn-outline" style="padding:0.5rem; font-size:0.8rem;" onclick="resetPartnerProfile()">✏️ Change Name / Experience / Skills</button>
             </div>
 
             <button type="button" class="back-btn" onclick="goTo('home')">← Back to Home</button>
@@ -367,6 +382,7 @@
         function verifyPartner() {
             initAudio();
             const name = document.getElementById('p-name').value.trim();
+            const exp = document.getElementById('p-exp').value;
             const otp = document.getElementById('p-otp').value.trim();
 
             if (!name) {
@@ -386,6 +402,7 @@
             }
 
             localStorage.setItem('p_name', name);
+            localStorage.setItem('p_exp', exp);
             localStorage.setItem('p_skills', selectedSkills.join(', '));
             localStorage.setItem('p_logged', 'true');
 
@@ -425,6 +442,7 @@
             const due = parseInt(localStorage.getItem('p_due') || '0');
 
             document.getElementById('p-disp-name').innerText = localStorage.getItem('p_name') || 'Partner';
+            document.getElementById('p-disp-exp').innerText = 'Experience: ' + (localStorage.getItem('p_exp') || 'Not Set');
             document.getElementById('p-disp-skills').innerText = 'Skills: ' + (localStorage.getItem('p_skills') || 'General');
             document.getElementById('p-earn').innerText = '₹' + earn;
             document.getElementById('p-due').innerText = '₹' + due;
